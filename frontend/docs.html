@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation — PatternPulse AI</title>
+  <meta name="description" content="API documentation for PatternPulse AI — integrate intelligent document classification and PDF redaction into your workflow." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="pages2.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <nav class="navbar scrolled" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            <path d="M8 16C8 11.5817 11.5817 8 16 8V16H24C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="16" cy="12" r="3" fill="white" fill-opacity="0.5"/>
+            <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+          </svg>
+          <span>PatternPulse AI</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="history.html" class="nav-link">History</a>
+          <a href="docs.html" class="nav-link">Documentation</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="profile.html" class="nav-avatar">
+            <div class="avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+          </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <main class="page-main">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+
+      <div class="page-container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Documentation</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="page-tag">Documentation</span>
+          <h1 class="page-title">API Documentation</h1>
+          <p class="page-subtitle">Everything you need to integrate PatternPulse AI into your workflow.</p>
+        </div>
+
+        <!-- Docs Layout -->
+        <div class="docs-layout fade-in fade-in-delay-1">
+
+          <!-- Sidebar -->
+          <div class="docs-sidebar">
+            <div class="docs-nav">
+              <a href="#api-overview" class="docs-nav-item active">API Overview</a>
+              <a href="#supported-files" class="docs-nav-item">Supported Files</a>
+              <a href="#classification" class="docs-nav-item">Classification</a>
+              <a href="#sensitive-data" class="docs-nav-item">Sensitive Data</a>
+              <a href="#error-codes" class="docs-nav-item">Error Codes</a>
+              <a href="#contact" class="docs-nav-item">Contact</a>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="docs-content">
+
+            <!-- API Overview -->
+            <div class="docs-section" id="api-overview">
+              <h2 class="docs-section-title">API Overview</h2>
+              <p class="docs-text">PatternPulse AI exposes a RESTful API built on FastAPI. The API accepts PDF uploads, processes them through the ML pipeline, and returns classification results along with redacted documents.</p>
+              <p class="docs-text">Base URL:</p>
+              <div class="docs-code-block"><span class="code-label">ENDPOINT</span><code>https://api.patternpulse.ai/v1</code></div>
+              <p class="docs-text">Authentication: All API requests require a Bearer token in the Authorization header.</p>
+              <div class="docs-code-block"><span class="code-label">CURL</span><code>curl -X POST https://api.patternpulse.ai/v1/analyze \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -F "file=@document.pdf"</code></div>
+              <div class="docs-callout">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <span>All API responses are returned in JSON format. File downloads are returned as binary streams.</span>
+              </div>
+            </div>
+
+            <!-- Supported Files -->
+            <div class="docs-section" id="supported-files">
+              <h2 class="docs-section-title">Supported File Types</h2>
+              <table class="docs-table">
+                <thead>
+                  <tr><th>Format</th><th>Extension</th><th>Max Size</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>PDF</td><td>.pdf</td><td>50 MB</td><td>Supported</td></tr>
+                  <tr><td>DOCX</td><td>.docx</td><td>—</td><td>Coming Soon</td></tr>
+                  <tr><td>DWG</td><td>.dwg</td><td>—</td><td>Planned</td></tr>
+                  <tr><td>DXF</td><td>.dxf</td><td>—</td><td>Planned</td></tr>
+                </tbody>
+              </table>
+              <div class="docs-callout callout-warn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span>Only PDF files are currently accepted. Uploading unsupported formats will return a 415 error.</span>
+              </div>
+            </div>
+
+            <!-- Classification Categories -->
+            <div class="docs-section" id="classification">
+              <h2 class="docs-section-title">Classification Categories</h2>
+              <p class="docs-text">PatternPulse AI classifies construction documents into six standard engineering disciplines used across the AEC industry.</p>
+              <table class="docs-table">
+                <thead>
+                  <tr><th>Discipline</th><th>Code</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Architectural</td><td><code>ARCH</code></td><td>Floor plans, elevations, sections, interior layouts</td></tr>
+                  <tr><td>Structural</td><td><code>STR</code></td><td>Foundation plans, framing, structural details</td></tr>
+                  <tr><td>Mechanical</td><td><code>MECH</code></td><td>HVAC layouts, ductwork, mechanical schedules</td></tr>
+                  <tr><td>Plumbing</td><td><code>PLMB</code></td><td>Piping layouts, fixture schedules, drainage</td></tr>
+                  <tr><td>Electrical</td><td><code>ELEC</code></td><td>Panel schedules, lighting plans, power layouts</td></tr>
+                  <tr><td>Fire Protection</td><td><code>FIRE</code></td><td>Sprinkler layouts, fire alarm plans</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Sensitive Information Detection -->
+            <div class="docs-section" id="sensitive-data">
+              <h2 class="docs-section-title">Sensitive Information Detection</h2>
+              <table class="docs-table">
+                <thead>
+                  <tr><th>Type</th><th>Method</th><th>Examples</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Person Names</td><td>spaCy NER</td><td>John Doe, Sarah Lee</td></tr>
+                  <tr><td>Email Addresses</td><td>Regex + NER</td><td>user@example.com</td></tr>
+                  <tr><td>Phone Numbers</td><td>Regex</td><td>(555) 123-4567</td></tr>
+                  <tr><td>Physical Addresses</td><td>spaCy NER</td><td>123 Main Street, Suite 100</td></tr>
+                  <tr><td>Project IDs</td><td>Regex</td><td>PRJ-2026-0042</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Error Codes -->
+            <div class="docs-section" id="error-codes">
+              <h2 class="docs-section-title">Error Codes</h2>
+              <table class="docs-table">
+                <thead>
+                  <tr><th>Code</th><th>Message</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>400</code></td><td>Bad Request</td><td>Missing or invalid parameters</td></tr>
+                  <tr><td><code>401</code></td><td>Unauthorized</td><td>Invalid or missing API key</td></tr>
+                  <tr><td><code>413</code></td><td>Payload Too Large</td><td>File exceeds 50 MB</td></tr>
+                  <tr><td><code>415</code></td><td>Unsupported Media Type</td><td>Format not supported</td></tr>
+                  <tr><td><code>422</code></td><td>Unprocessable Entity</td><td>Cannot extract text</td></tr>
+                  <tr><td><code>429</code></td><td>Rate Limited</td><td>Too many requests</td></tr>
+                  <tr><td><code>500</code></td><td>Internal Server Error</td><td>Server-side error</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Contact & Support -->
+            <div class="docs-section" id="contact">
+              <h2 class="docs-section-title">Contact &amp; Support</h2>
+              <p class="docs-text">Have questions, feedback, or need help integrating PatternPulse AI? Reach out through any of the channels below.</p>
+              <div class="contact-cards">
+                <div class="contact-card">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <h3>Email</h3>
+                  <p>support@patternpulse.ai</p>
+                </div>
+                <div class="contact-card">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <h3>GitHub</h3>
+                  <p>github.com/patternpulse</p>
+                </div>
+                <div class="contact-card">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                  <h3>Documentation</h3>
+                  <p>docs.patternpulse.ai</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer"><div class="footer-container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>&copy; 2026 PatternPulse AI. All rights reserved.</p><div class="footer-socials"><a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></div></footer>
+
+  </div>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    // Scroll spy for docs sidebar
+    const sections = document.querySelectorAll('.docs-section');
+    const navItems = document.querySelectorAll('.docs-nav-item');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 120) current = section.id;
+      });
+      navItems.forEach(item => {
+        item.classList.toggle('active', item.getAttribute('href') === '#' + current);
+      });
+    });
+    // Smooth scroll for sidebar links
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(item.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — PatternPulse AI</title>
+  <meta name="description" content="Manage your PatternPulse AI account settings and preferences." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="pages2.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <nav class="navbar scrolled" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            <path d="M8 16C8 11.5817 11.5817 8 16 8V16H24C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="16" cy="12" r="3" fill="white" fill-opacity="0.5"/>
+            <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+          </svg>
+          <span>PatternPulse AI</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="history.html" class="nav-link">History</a>
+          <a href="docs.html" class="nav-link">Documentation</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="profile.html" class="nav-avatar">
+            <div class="avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+          </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <main class="page-main">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="page-container">
+        <div class="breadcrumb fade-in">Home <span class="breadcrumb-sep">/</span> Settings</div>
+        
+        <div class="page-header fade-in">
+          <span class="section-tag">Account</span>
+          <h1 class="page-title">Settings & Profile</h1>
+          <p class="page-subtitle">Manage your account preferences, notifications, and security settings.</p>
+        </div>
+
+        <div class="settings-layout fade-in fade-in-delay-1">
+          <!-- Sidebar -->
+          <div class="settings-sidebar">
+            <div class="settings-nav">
+              <a href="#profile" class="settings-nav-item active">Profile</a>
+              <a href="#preferences" class="settings-nav-item">Preferences</a>
+              <a href="#notifications" class="settings-nav-item">Notifications</a>
+              <a href="#security" class="settings-nav-item">Security</a>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="settings-content">
+            
+            <!-- Profile Section -->
+            <div class="settings-section" id="profile">
+              <h2 class="settings-section-title">Profile Information</h2>
+              <div class="settings-card">
+                <div class="profile-header">
+                  <div class="profile-avatar-large">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="profile-name">Alex Engineer</h3>
+                    <p class="profile-email">alex@example.com</p>
+                    <span class="profile-role">Pro Plan User</span>
+                  </div>
+                  <button class="btn btn-secondary profile-edit-btn">Edit Avatar</button>
+                </div>
+                
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-input" value="Alex Engineer" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" value="alex@example.com" />
+                  </div>
+                </div>
+                <button class="btn btn-primary mt-4">Save Changes</button>
+              </div>
+            </div>
+
+            <!-- Preferences Section -->
+            <div class="settings-section" id="preferences">
+              <h2 class="settings-section-title">Theme & Preferences</h2>
+              <div class="settings-card">
+                
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <h4 class="setting-title">Dark Mode</h4>
+                    <p class="setting-desc">Toggle the premium dark glassmorphism theme.</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <h4 class="setting-title">Language</h4>
+                    <p class="setting-desc">Select your preferred interface language.</p>
+                  </div>
+                  <select class="form-select" style="width: 140px;">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>German</option>
+                  </select>
+                </div>
+
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <h4 class="setting-title">Default Download Format</h4>
+                    <p class="setting-desc">Choose the format for generated reports.</p>
+                  </div>
+                  <select class="form-select" style="width: 140px;">
+                    <option>CSV</option>
+                    <option>JSON</option>
+                    <option>Excel</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Notifications Section -->
+            <div class="settings-section" id="notifications">
+              <h2 class="settings-section-title">Notifications</h2>
+              <div class="settings-card">
+                
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <h4 class="setting-title">Email Notifications</h4>
+                    <p class="setting-desc">Receive a daily summary of document activity.</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <h4 class="setting-title">Processing Complete Alerts</h4>
+                    <p class="setting-desc">Notify me when a large document finishes processing.</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <h4 class="setting-title">Marketing Updates</h4>
+                    <p class="setting-desc">Receive news about new features and updates.</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Security Section -->
+            <div class="settings-section" id="security">
+              <h2 class="settings-section-title">Security</h2>
+              <div class="settings-card">
+                
+                <h4 class="setting-title mb-3">Change Password</h4>
+                <div class="form-group mb-3">
+                  <input type="password" class="form-input" placeholder="Current Password" />
+                </div>
+                <div class="form-group-row mb-3">
+                  <div class="form-group">
+                    <input type="password" class="form-input" placeholder="New Password" />
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Confirm New Password" />
+                  </div>
+                </div>
+                <button class="btn btn-secondary mb-5">Update Password</button>
+
+                <hr class="settings-divider" />
+
+                <div class="setting-row danger-zone">
+                  <div class="setting-info">
+                    <h4 class="setting-title text-red">Log Out</h4>
+                    <p class="setting-desc">End your current session across all devices.</p>
+                  </div>
+                  <button class="btn btn-danger">Log Out</button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer"><div class="footer-container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>&copy; 2026 PatternPulse AI. All rights reserved.</p><div class="footer-socials"><a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></div></footer>
+  </div>
+
+  <script>
+    // Mobile Nav
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Scroll spy for settings sidebar
+    const sections = document.querySelectorAll('.settings-section');
+    const navItems = document.querySelectorAll('.settings-nav-item');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + current) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scroll for sidebar links
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(item.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

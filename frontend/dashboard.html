@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — PatternPulse AI</title>
+  <meta name="description" content="PatternPulse AI Dashboard — Track your document processing activity, classification results, and performance metrics in one comprehensive analytics overview." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="pages2.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <nav class="navbar scrolled" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            <path d="M8 16C8 11.5817 11.5817 8 16 8V16H24C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="16" cy="12" r="3" fill="white" fill-opacity="0.5"/>
+            <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+          </svg>
+          <span>PatternPulse AI</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="history.html" class="nav-link">History</a>
+          <a href="docs.html" class="nav-link">Documentation</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="profile.html" class="nav-avatar">
+            <div class="avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+          </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <main class="page-main">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="page-container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb fade-in">
+          <a href="index.html">Home</a>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <span>Dashboard</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header fade-in">
+          <span class="section-tag">Dashboard</span>
+          <h1 class="page-title">Your Analytics Overview</h1>
+          <p class="page-subtitle">Track your document processing activity, classification results and performance metrics.</p>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="dash-stats fade-in fade-in-delay-1">
+
+          <!-- Total PDFs Processed -->
+          <div class="dash-stat-card stat-blue">
+            <div class="dash-stat-header">
+              <span class="dash-stat-label">Total PDFs Processed</span>
+              <div class="dash-stat-icon icon-blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value" data-value="1,247">0</div>
+            <div class="dash-stat-change up">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+              +12.5% this month
+            </div>
+          </div>
+
+          <!-- Avg Confidence -->
+          <div class="dash-stat-card stat-green">
+            <div class="dash-stat-header">
+              <span class="dash-stat-label">Avg Confidence</span>
+              <div class="dash-stat-icon icon-green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value" data-value="94.2%">0</div>
+            <div class="dash-stat-change up">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+              +2.1% vs last month
+            </div>
+          </div>
+
+          <!-- Items Redacted -->
+          <div class="dash-stat-card stat-purple">
+            <div class="dash-stat-header">
+              <span class="dash-stat-label">Items Redacted</span>
+              <div class="dash-stat-icon icon-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value" data-value="8,391">0</div>
+            <div class="dash-stat-change up">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+              +18.3% this month
+            </div>
+          </div>
+
+          <!-- Avg Processing Time -->
+          <div class="dash-stat-card stat-orange">
+            <div class="dash-stat-header">
+              <span class="dash-stat-label">Avg Processing Time</span>
+              <div class="dash-stat-icon icon-orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+            </div>
+            <div class="dash-stat-value" data-value="4.8s">0</div>
+            <div class="dash-stat-change down">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              -0.3s improvement
+            </div>
+          </div>
+
+        </div>
+
+        <!-- First Grid: Category Distribution + Quick Actions -->
+        <div class="dash-grid fade-in fade-in-delay-2">
+
+          <!-- Category Distribution -->
+          <div class="dash-card">
+            <div class="dash-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="8" y1="15" x2="8" y2="9"/><line x1="12" y1="15" x2="12" y2="7"/><line x1="16" y1="15" x2="16" y2="11"/></svg>
+              Category Distribution
+            </div>
+            <div class="bar-chart">
+              <div class="bar-col">
+                <div class="bar-value">34%</div>
+                <div class="bar bar-arch" style="height:85%"></div>
+                <div class="bar-label">Arch</div>
+              </div>
+              <div class="bar-col">
+                <div class="bar-value">22%</div>
+                <div class="bar bar-str" style="height:55%"></div>
+                <div class="bar-label">Struct</div>
+              </div>
+              <div class="bar-col">
+                <div class="bar-value">18%</div>
+                <div class="bar bar-mech" style="height:45%"></div>
+                <div class="bar-label">Mech</div>
+              </div>
+              <div class="bar-col">
+                <div class="bar-value">12%</div>
+                <div class="bar bar-plum" style="height:30%"></div>
+                <div class="bar-label">Plumb</div>
+              </div>
+              <div class="bar-col">
+                <div class="bar-value">9%</div>
+                <div class="bar bar-elec" style="height:22%"></div>
+                <div class="bar-label">Elec</div>
+              </div>
+              <div class="bar-col">
+                <div class="bar-value">5%</div>
+                <div class="bar bar-fire" style="height:12%"></div>
+                <div class="bar-label">Fire</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="dash-card">
+            <div class="dash-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Quick Actions
+            </div>
+            <div class="quick-actions">
+              <a href="upload.html" class="quick-action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                Upload New Document
+                <span class="qa-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+              </a>
+              <a href="history.html" class="quick-action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                View Processing History
+                <span class="qa-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+              </a>
+              <a href="docs.html" class="quick-action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Read Documentation
+                <span class="qa-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+              </a>
+              <a href="about.html" class="quick-action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                About PatternPulse AI
+                <span class="qa-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Second Grid: Recent Uploads + Recent Activity -->
+        <div class="dash-grid fade-in fade-in-delay-3">
+
+          <!-- Recent Uploads -->
+          <div class="dash-card">
+            <div class="dash-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Recent Uploads
+            </div>
+            <div class="recent-files-list">
+
+              <div class="recent-file-row">
+                <div class="rf-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div class="rf-info">
+                  <div class="rf-name">Floor_Plan_A101.pdf</div>
+                  <div class="rf-meta">4.2 MB · 2 hours ago</div>
+                </div>
+                <span class="rf-badge badge-arch">Architectural</span>
+              </div>
+
+              <div class="recent-file-row">
+                <div class="rf-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div class="rf-info">
+                  <div class="rf-name">MEP_Layout_Rev2.pdf</div>
+                  <div class="rf-meta">8.1 MB · 5 hours ago</div>
+                </div>
+                <span class="rf-badge badge-mech">Mechanical</span>
+              </div>
+
+              <div class="recent-file-row">
+                <div class="rf-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div class="rf-info">
+                  <div class="rf-name">Structural_S05.pdf</div>
+                  <div class="rf-meta">12.7 MB · 1 day ago</div>
+                </div>
+                <span class="rf-badge badge-str">Structural</span>
+              </div>
+
+              <div class="recent-file-row">
+                <div class="rf-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div class="rf-info">
+                  <div class="rf-name">Electrical_E03.pdf</div>
+                  <div class="rf-meta">6.3 MB · 2 days ago</div>
+                </div>
+                <span class="rf-badge badge-elec">Electrical</span>
+              </div>
+
+              <div class="recent-file-row">
+                <div class="rf-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div class="rf-info">
+                  <div class="rf-name">Plumbing_P02.pdf</div>
+                  <div class="rf-meta">3.1 MB · 3 days ago</div>
+                </div>
+                <span class="rf-badge badge-plum">Plumbing</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="dash-card">
+            <div class="dash-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Recent Activity
+            </div>
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-blue"></div>
+                <div class="timeline-text"><strong>Floor_Plan_A101.pdf</strong> classified as Architectural with 96.2% confidence</div>
+                <div class="timeline-time">2 hours ago</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-green"></div>
+                <div class="timeline-text"><strong>3 sensitive items</strong> redacted from MEP_Layout_Rev2.pdf</div>
+                <div class="timeline-time">5 hours ago</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-purple"></div>
+                <div class="timeline-text"><strong>Structural_S05.pdf</strong> processing completed</div>
+                <div class="timeline-time">1 day ago</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-orange"></div>
+                <div class="timeline-text"><strong>System update</strong> — Model accuracy improved to 94.2%</div>
+                <div class="timeline-time">2 days ago</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-blue"></div>
+                <div class="timeline-text"><strong>Plumbing_P02.pdf</strong> classified as Plumbing with 91.8% confidence</div>
+                <div class="timeline-time">3 days ago</div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer"><div class="footer-container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>&copy; 2026 PatternPulse AI. All rights reserved.</p><div class="footer-socials"><a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></div></footer>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

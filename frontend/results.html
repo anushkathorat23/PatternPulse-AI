@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results — PatternPulse AI</title>
+  <meta name="description" content="View AI classification results, confidence scores, and download redacted PDFs from PatternPulse AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar scrolled" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            <path d="M8 16C8 11.5817 11.5817 8 16 8V16H24C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="16" cy="12" r="3" fill="white" fill-opacity="0.5"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#3B82F6"/>
+                <stop offset="1" stop-color="#10B981"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>PatternPulse AI</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html#features" class="nav-link">Features</a>
+          <a href="index.html#how-it-works" class="nav-link">How it Works</a>
+          <a href="#" class="nav-link">Docs</a>
+          <a href="#" class="nav-link">GitHub</a>
+          <a href="upload.html" class="nav-cta">Upload PDF</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="page-main">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb fade-in">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="upload.html">Upload</a>
+          <span class="separator">/</span>
+          <span class="current">Results</span>
+        </div>
+
+        <!-- Results Header Bar -->
+        <div class="results-header-bar fade-in fade-in-delay-1">
+          <div class="results-file-info">
+            <div class="results-file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div class="results-filename" id="results-filename">Floor_Plan_A101.pdf</div>
+              <div class="results-file-meta" id="results-file-meta">4.2 MB · 12 pages · Analyzed Jul 7, 2026</div>
+            </div>
+          </div>
+          <div class="results-actions">
+            <a href="#" class="btn btn-primary" id="btn-download-redacted">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Redacted PDF
+            </a>
+            <a href="#" class="btn btn-secondary" id="btn-download-csv">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Download CSV Report
+            </a>
+          </div>
+        </div>
+
+        <!-- Results Grid -->
+        <div class="results-grid">
+
+          <!-- Predicted Discipline -->
+          <div class="result-card fade-in fade-in-delay-2" id="card-discipline">
+            <div class="result-card-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+              Predicted Discipline
+            </div>
+            <div class="discipline-display">
+              <div>
+                <div class="discipline-name" id="discipline-name">Architectural</div>
+                <div class="discipline-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Primary Classification
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Confidence Score -->
+          <div class="result-card fade-in fade-in-delay-2" id="card-confidence">
+            <div class="result-card-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              Confidence Score
+            </div>
+            <div class="confidence-display">
+              <div class="circular-progress" id="circular-progress">
+                <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#3B82F6"/>
+                      <stop offset="100%" stop-color="#10B981"/>
+                    </linearGradient>
+                  </defs>
+                  <circle class="track" cx="60" cy="60" r="54"/>
+                  <circle class="fill" cx="60" cy="60" r="54" id="confidence-circle"/>
+                </svg>
+                <div class="circular-value">
+                  <span class="circular-number" id="confidence-number">0</span>
+                  <span class="circular-suffix">confidence</span>
+                </div>
+              </div>
+              <div class="confidence-details">
+                <div class="confidence-label-text">Model certainty for this classification</div>
+                <div class="confidence-interpretation" id="confidence-interpretation">Very High Confidence</div>
+                <div class="confidence-bar-mini">
+                  <div class="confidence-bar-mini-fill" id="confidence-bar-fill" style="width: 0%"></div>
+                </div>
+                <div class="confidence-alt-scores" id="alt-scores">
+                  <span class="alt-score">Structural: 4.2%</span>
+                  <span class="alt-score">Mechanical: 1.8%</span>
+                  <span class="alt-score">Electrical: 0.9%</span>
+                  <span class="alt-score">Plumbing: 0.5%</span>
+                  <span class="alt-score">Fire Prot: 0.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Document Preview -->
+          <div class="result-card fade-in fade-in-delay-3" id="card-preview">
+            <div class="result-card-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              Document Preview
+            </div>
+            <div class="doc-preview-frame">
+              <div class="doc-preview-mockup">
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+              </div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="position:relative; z-index:2;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span style="position:relative; z-index:2;">Floor_Plan_A101.pdf — Page 1 of 12</span>
+            </div>
+          </div>
+
+          <!-- Extracted Keywords -->
+          <div class="result-card fade-in fade-in-delay-3" id="card-keywords">
+            <div class="result-card-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+              Extracted Keywords
+            </div>
+            <div class="keywords-wrap" id="keywords-wrap">
+              <span class="keyword-tag">floor plan</span>
+              <span class="keyword-tag">elevation</span>
+              <span class="keyword-tag">section detail</span>
+              <span class="keyword-tag">room schedule</span>
+              <span class="keyword-tag">door schedule</span>
+              <span class="keyword-tag">window type</span>
+              <span class="keyword-tag">finish plan</span>
+              <span class="keyword-tag">reflected ceiling</span>
+              <span class="keyword-tag">partition wall</span>
+              <span class="keyword-tag">staircase detail</span>
+              <span class="keyword-tag">demolition plan</span>
+              <span class="keyword-tag">interior layout</span>
+            </div>
+          </div>
+
+          <!-- Sensitive Information Detected -->
+          <div class="result-card result-card-full fade-in fade-in-delay-4" id="card-sensitive">
+            <div class="result-card-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Sensitive Information Detected
+            </div>
+            <div class="sensitive-list" id="sensitive-list">
+              <div class="sensitive-item">
+                <span class="sensitive-type-badge type-name">Name</span>
+                <span class="sensitive-value">J███ D██</span>
+                <span class="sensitive-redacted">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Redacted
+                </span>
+              </div>
+              <div class="sensitive-item">
+                <span class="sensitive-type-badge type-email">Email</span>
+                <span class="sensitive-value">j███@████████.com</span>
+                <span class="sensitive-redacted">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Redacted
+                </span>
+              </div>
+              <div class="sensitive-item">
+                <span class="sensitive-type-badge type-phone">Phone</span>
+                <span class="sensitive-value">(███) ███-██42</span>
+                <span class="sensitive-redacted">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Redacted
+                </span>
+              </div>
+              <div class="sensitive-item">
+                <span class="sensitive-type-badge type-address">Address</span>
+                <span class="sensitive-value">1██ M███ S█████, Suite ███</span>
+                <span class="sensitive-redacted">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Redacted
+                </span>
+              </div>
+              <div class="sensitive-item">
+                <span class="sensitive-type-badge type-id">Project ID</span>
+                <span class="sensitive-value">PRJ-████-██28</span>
+                <span class="sensitive-redacted">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Redacted
+                </span>
+              </div>
+              <div class="sensitive-item">
+                <span class="sensitive-type-badge type-name">Name</span>
+                <span class="sensitive-value">S████ L██</span>
+                <span class="sensitive-redacted">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Redacted
+                </span>
+              </div>
+              <div class="sensitive-item">
+                <span class="sensitive-type-badge type-email">Email</span>
+                <span class="sensitive-value">s████@████████.com</span>
+                <span class="sensitive-redacted">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Redacted
+                </span>
+              </div>
+            </div>
+            <div class="sensitive-count">
+              <strong>7 items</strong> detected and successfully redacted across <strong>12 pages</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Actions -->
+        <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 16px;" class="fade-in fade-in-delay-4">
+          <a href="upload.html" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/></svg>
+            Upload Another
+          </a>
+          <a href="index.html" class="btn btn-ghost">Back to Home</a>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+      <div class="footer-container">
+        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+          <p>&copy; 2026 PatternPulse AI. All rights reserved.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="results.js"></script>
+</body>
+</html>

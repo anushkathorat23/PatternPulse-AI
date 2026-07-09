@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PatternPulse AI — AI-Powered Construction Drawing Classification & PDF Redaction</title>
+  <meta name="description" content="Automatically classify engineering drawings into six disciplines and securely redact sensitive information from PDF documents with PatternPulse AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+          <path d="M8 16C8 11.5817 11.5817 8 16 8V16H24C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z" fill="white" fill-opacity="0.9"/>
+          <circle cx="16" cy="12" r="3" fill="white" fill-opacity="0.5"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+              <stop stop-color="#3B82F6"/>
+              <stop offset="1" stop-color="#10B981"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>PatternPulse AI</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#features" class="nav-link" id="nav-features">Features</a>
+        <a href="#how-it-works" class="nav-link" id="nav-how-it-works">How it Works</a>
+        <a href="docs.html" class="nav-link" id="nav-docs">Docs</a>
+        <a href="#" class="nav-link" id="nav-github">GitHub</a>
+        <a href="upload.html" class="nav-cta" id="nav-get-started">Get Started</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-grid-bg"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge" id="hero-badge">
+          <span class="badge-dot"></span>
+          Now in Public Beta
+        </div>
+        <h1 class="hero-title" id="hero-title">
+          AI-Powered Construction Drawing Classification &amp; Secure PDF Redaction
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+          Automatically classify engineering drawings into six disciplines and securely redact sensitive information from PDF documents.
+        </p>
+        <div class="hero-actions" id="hero-actions">
+          <a href="upload.html" class="btn btn-primary" id="btn-try-demo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Try Demo
+          </a>
+          <a href="#" class="btn btn-secondary" id="btn-view-github">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            View GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual" id="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="hero_illustration.jpg" alt="PatternPulse AI Dashboard — AI document analysis and classification interface" class="hero-image" id="hero-image" />
+          <div class="hero-image-glow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats" id="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number" data-target="6">0</span>
+        <span class="stat-label">Drawing Disciplines</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="99" data-suffix="%">0</span>
+        <span class="stat-label">Classification Accuracy</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="5" data-suffix="s">0</span>
+        <span class="stat-label">Avg Processing Time</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100" data-suffix="%">0</span>
+        <span class="stat-label">Redaction Coverage</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag" id="features-tag">Features</span>
+        <h2 class="section-title" id="features-title">Everything you need, nothing you don't</h2>
+        <p class="section-subtitle" id="features-subtitle">Powerful AI tools designed for construction professionals who value speed, security and precision.</p>
+      </div>
+      <div class="features-grid" id="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card" id="feature-classification">
+          <div class="feature-icon-wrap feature-icon-blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Smart Classification</h3>
+          <p class="feature-desc">Automatically classify construction drawings into Architectural, Structural, Mechanical, Plumbing, Electrical and Fire Protection.</p>
+          <div class="feature-tags">
+            <span>Architectural</span><span>Structural</span><span>Mechanical</span><span>+3 more</span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="feature-card" id="feature-redaction">
+          <div class="feature-icon-wrap feature-icon-green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+              <circle cx="12" cy="16" r="1"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Secure Redaction</h3>
+          <p class="feature-desc">Detect and redact names, emails, phone numbers, addresses and project identifiers from sensitive documents.</p>
+          <div class="feature-tags">
+            <span>Names</span><span>Emails</span><span>Phone</span><span>Addresses</span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="feature-card" id="feature-processing">
+          <div class="feature-icon-wrap feature-icon-purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI Processing</h3>
+          <p class="feature-desc">Fast document analysis powered by Machine Learning models trained on thousands of engineering drawings.</p>
+          <div class="feature-tags">
+            <span>ML Models</span><span>NLP</span><span>Fast</span>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="feature-card" id="feature-export">
+          <div class="feature-icon-wrap feature-icon-orange">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Export Reports</h3>
+          <p class="feature-desc">Download classification predictions and securely redacted PDFs with full audit trails and metadata.</p>
+          <div class="feature-tags">
+            <span>PDF Export</span><span>Reports</span><span>Audit Trail</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag" id="hiw-tag">How It Works</span>
+        <h2 class="section-title" id="hiw-title">From upload to insight in seconds</h2>
+        <p class="section-subtitle" id="hiw-subtitle">A streamlined pipeline that transforms raw PDFs into classified, redacted documents.</p>
+      </div>
+      <div class="pipeline" id="pipeline">
+        <div class="pipeline-line"></div>
+        <div class="pipeline-step" id="step-upload">
+          <div class="step-node">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div class="step-content">
+            <span class="step-number">01</span>
+            <h3>Upload PDF</h3>
+            <p>Drag and drop your construction drawings or browse to upload.</p>
+          </div>
+        </div>
+        <div class="pipeline-step" id="step-extract">
+          <div class="step-node">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="step-content">
+            <span class="step-number">02</span>
+            <h3>Extract Text</h3>
+            <p>PyMuPDF extracts all text content from each page of the document.</p>
+          </div>
+        </div>
+        <div class="pipeline-step" id="step-classify">
+          <div class="step-node">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <div class="step-content">
+            <span class="step-number">03</span>
+            <h3>AI Classification</h3>
+            <p>Machine learning model classifies drawings into six engineering disciplines.</p>
+          </div>
+        </div>
+        <div class="pipeline-step" id="step-detect">
+          <div class="step-node">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="step-content">
+            <span class="step-number">04</span>
+            <h3>Detect Sensitive Data</h3>
+            <p>NLP engine identifies names, emails, phone numbers and addresses.</p>
+          </div>
+        </div>
+        <div class="pipeline-step" id="step-redact">
+          <div class="step-node">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div class="step-content">
+            <span class="step-number">05</span>
+            <h3>Generate Redacted PDF</h3>
+            <p>Sensitive information is permanently removed from the document.</p>
+          </div>
+        </div>
+        <div class="pipeline-step" id="step-download">
+          <div class="step-node">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div class="step-content">
+            <span class="step-number">06</span>
+            <h3>Download</h3>
+            <p>Get your classified results and securely redacted PDFs instantly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH STACK ===== -->
+  <section class="tech-stack" id="tech-stack">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag" id="tech-tag">Tech Stack</span>
+        <h2 class="section-title" id="tech-title">Built with industry-leading tools</h2>
+        <p class="section-subtitle" id="tech-subtitle">A modern, battle-tested stack for reliable AI document processing.</p>
+      </div>
+      <div class="tech-grid" id="tech-grid">
+        <div class="tech-card" id="tech-react">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon"><path d="M14.23 12.004a2.236 2.236 0 01-2.235 2.236 2.236 2.236 0 01-2.236-2.236 2.236 2.236 0 012.235-2.236 2.236 2.236 0 012.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.592.06-.842.174-.95.467-1.33 1.74-1.088 3.59.088.67.247 1.39.47 2.148C2.725 8.487 1.5 10.137 1.5 12c0 1.862 1.225 3.513 3.143 4.754-.223.758-.382 1.478-.47 2.148-.242 1.85.139 3.123 1.088 3.59.25.114.532.174.842.174 1.345 0 3.107-.96 4.888-2.622 1.78 1.653 3.541 2.602 4.887 2.602.31 0 .592-.06.842-.174.95-.467 1.33-1.74 1.088-3.59a14.463 14.463 0 00-.47-2.148C20.775 15.513 22 13.862 22 12c0-1.862-1.225-3.513-3.143-4.754.223-.758.382-1.478.47-2.148.242-1.85-.139-3.123-1.088-3.59a1.58 1.58 0 00-.842-.174zM7.508 2.89c.192-.094.42-.137.685-.137 1.01 0 2.515.82 4.095 2.293-1.175 1.17-2.283 2.527-3.263 4.032a24.37 24.37 0 00-3.18.633 12.932 12.932 0 01-.398-1.846c-.196-1.502.07-2.528.561-2.775l.5.2zm-3.592 9.11c0-1.423.96-2.82 2.646-3.87.321.84.711 1.718 1.164 2.618a21.48 21.48 0 00-1.164 2.618C5.877 12.824 3.916 11.423 3.916 12zm3.592 9.11c-.491-.247-.757-1.273-.561-2.775.063-.48.194-1.045.398-1.847a24.37 24.37 0 003.18.633c.98 1.505 2.088 2.862 3.263 4.032-1.58 1.473-3.085 2.293-4.095 2.293-.265 0-.493-.043-.685-.137zm8.485 0c-.49.247-.756 1.273-.56 2.775.062.48.193 1.045.397 1.847a24.37 24.37 0 01-3.18-.633c-.98-1.505-2.088-2.862-3.263-4.032 1.58-1.473 3.085-2.293 4.095-2.293.265 0 .493.043.685.137zm-1.902-5.11c-.55.954-1.14 1.862-1.758 2.702a21.6 21.6 0 01-2.3.002c-.618-.84-1.21-1.748-1.758-2.702A21.48 21.48 0 018.44 12c.242-.473.502-.939.78-1.395a21.6 21.6 0 011.758-2.702 21.6 21.6 0 012.3-.002c.618.84 1.21 1.748 1.758 2.702.278.456.538.922.78 1.395a21.48 21.48 0 01-.78 1.397zm1.816-.997c.453.9.843 1.778 1.164 2.618-1.686 1.05-2.646 2.447-2.646 3.87 0-1.423.96-2.82 2.646-3.87a18.592 18.592 0 01-1.164-2.618z"/></svg>
+          <span class="tech-name">React</span>
+        </div>
+        <div class="tech-card" id="tech-fastapi">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon"><path d="M12 0C5.375 0 0 5.375 0 12c0 6.627 5.375 12 12 12 6.626 0 12-5.373 12-12 0-6.625-5.373-12-12-12zm-.624 21.62v-7.528H7.19L13.203 2.38v7.528h4.029L11.376 21.62z"/></svg>
+          <span class="tech-name">FastAPI</span>
+        </div>
+        <div class="tech-card" id="tech-python">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.03v-2.867s-.109-3.42 3.35-3.42h5.766s3.24.052 3.24-3.148V3.202S18.28 0 11.914 0zM8.708 1.85a1.06 1.06 0 110 2.12 1.06 1.06 0 010-2.12z"/><path d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752H11.98v-.826h8.121S24 18.211 24 12.031c0-6.18-3.403-5.96-3.403-5.96h-2.03v2.867s.109 3.42-3.35 3.42H9.451s-3.24-.052-3.24 3.148v5.292S5.72 24 12.086 24zm3.206-1.85a1.06 1.06 0 110-2.12 1.06 1.06 0 010 2.12z"/></svg>
+          <span class="tech-name">Python</span>
+        </div>
+        <div class="tech-card" id="tech-sklearn">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L19.36 8 12 11.82 4.64 8 12 4.18zM4 9.24l7 3.5V19.5l-7-3.5V9.24zm16 0v6.76l-7 3.5v-6.76l7-3.5z"/></svg>
+          <span class="tech-name">scikit-learn</span>
+        </div>
+        <div class="tech-card" id="tech-spacy">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 3h8v2H8v-2zm0 3h5v2H8v-2z"/></svg>
+          <span class="tech-name">spaCy</span>
+        </div>
+        <div class="tech-card" id="tech-pymupdf">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+          <span class="tech-name">PyMuPDF</span>
+        </div>
+        <div class="tech-card" id="tech-tailwind">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+          <span class="tech-name">Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section" id="cta-section">
+    <div class="section-container">
+      <div class="cta-card" id="cta-card">
+        <div class="cta-glow"></div>
+        <h2 class="cta-title">Ready to automate your workflow?</h2>
+        <p class="cta-subtitle">Start classifying drawings and redacting sensitive data in minutes — no setup required.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-lg" id="cta-get-started">
+            Get Started Free
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#" class="btn btn-ghost btn-lg" id="cta-docs">Read the Docs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo" id="footer-logo">
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="url(#logoGrad2)" />
+              <path d="M8 16C8 11.5817 11.5817 8 16 8V16H24C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z" fill="white" fill-opacity="0.9"/>
+              <circle cx="16" cy="12" r="3" fill="white" fill-opacity="0.5"/>
+              <defs>
+                <linearGradient id="logoGrad2" x1="0" y1="0" x2="32" y2="32">
+                  <stop stop-color="#3B82F6"/>
+                  <stop offset="1" stop-color="#10B981"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>PatternPulse AI</span>
+          </a>
+          <p class="footer-desc">AI-Powered construction drawing classification and secure PDF redaction.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features" id="footer-features">Features</a>
+            <a href="#how-it-works" id="footer-how-it-works">How it Works</a>
+            <a href="#" id="footer-pricing">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#" id="footer-docs">Documentation</a>
+            <a href="#" id="footer-github-link">GitHub</a>
+            <a href="#" id="footer-api">API Reference</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#" id="footer-about">About</a>
+            <a href="#" id="footer-contact">Contact</a>
+            <a href="#" id="footer-privacy">Privacy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PatternPulse AI. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="GitHub" id="footer-social-github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" id="footer-social-twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

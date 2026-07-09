@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — PatternPulse AI</title>
+  <meta name="description" content="Learn about PatternPulse AI — intelligent document classification and secure PDF redaction for the AEC industry." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="pages2.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <nav class="navbar scrolled" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            <path d="M8 16C8 11.5817 11.5817 8 16 8V16H24C24 20.4183 20.4183 24 16 24C11.5817 24 8 20.4183 8 16Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="16" cy="12" r="3" fill="white" fill-opacity="0.5"/>
+            <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+          </svg>
+          <span>PatternPulse AI</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="history.html" class="nav-link">History</a>
+          <a href="docs.html" class="nav-link">Documentation</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="profile.html" class="nav-avatar">
+            <div class="avatar-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+          </a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <main class="page-main">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+
+      <div class="page-container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>About</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="page-tag">About</span>
+          <h1 class="page-title">About PatternPulse AI</h1>
+          <p class="page-subtitle">Learn about the technology behind intelligent document classification and secure PDF redaction.</p>
+        </div>
+
+        <!-- What is PatternPulse AI? -->
+        <div class="about-section fade-in fade-in-delay-1">
+          <h2 class="about-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            What is PatternPulse AI?
+          </h2>
+          <p class="about-text">PatternPulse AI is an intelligent document processing platform designed for the Architecture, Engineering, and Construction (AEC) industry. It uses machine learning to automatically classify construction drawings into six engineering disciplines: Architectural, Structural, Mechanical, Plumbing, Electrical, and Fire Protection.</p>
+          <p class="about-text">Beyond classification, PatternPulse AI provides secure PDF redaction capabilities using Natural Language Processing (NLP) to detect and permanently remove sensitive information such as names, email addresses, phone numbers, physical addresses, and project identifiers from construction documents.</p>
+        </div>
+
+        <!-- Project Architecture -->
+        <div class="about-section fade-in fade-in-delay-2">
+          <h2 class="about-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            Project Architecture
+          </h2>
+          <p class="about-text">PatternPulse AI follows a modern client-server architecture with a React frontend and FastAPI backend, connected through a RESTful API.</p>
+          <div class="arch-diagram">
+            <div class="arch-node node-primary">
+              <strong>React Frontend</strong>
+              <span>User Interface</span>
+            </div>
+            <span class="arch-arrow">→</span>
+            <div class="arch-node node-accent">
+              <strong>FastAPI Backend</strong>
+              <span>REST API</span>
+            </div>
+            <span class="arch-arrow">→</span>
+            <div class="arch-node node-purple">
+              <strong>ML Pipeline</strong>
+              <span>scikit-learn + spaCy</span>
+            </div>
+            <span class="arch-arrow">→</span>
+            <div class="arch-node node-primary">
+              <strong>PyMuPDF</strong>
+              <span>PDF Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Pipeline -->
+        <div class="about-section fade-in fade-in-delay-3">
+          <h2 class="about-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+            AI Pipeline
+          </h2>
+          <p class="about-text">Documents flow through a multi-stage pipeline that extracts text, classifies content, identifies sensitive data, and generates redacted outputs.</p>
+          <div class="pipeline-visual">
+            <div class="pv-step"><span class="pv-num">1</span><span>Upload PDF Document</span></div>
+            <span class="pv-arrow">↓</span>
+            <div class="pv-step"><span class="pv-num">2</span><span>Extract Text via PyMuPDF</span></div>
+            <span class="pv-arrow">↓</span>
+            <div class="pv-step"><span class="pv-num">3</span><span>Classify with ML Model</span></div>
+            <span class="pv-arrow">↓</span>
+            <div class="pv-step"><span class="pv-num">4</span><span>Detect PII with spaCy NER</span></div>
+            <span class="pv-arrow">↓</span>
+            <div class="pv-step"><span class="pv-num">5</span><span>Generate Redacted PDF</span></div>
+            <span class="pv-arrow">↓</span>
+            <div class="pv-step"><span class="pv-num">6</span><span>Download Results &amp; Report</span></div>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="about-section fade-in fade-in-delay-3">
+          <h2 class="about-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            Tech Stack
+          </h2>
+          <p class="about-text">PatternPulse AI is built using a modern, production-ready technology stack optimized for performance, scalability, and developer experience.</p>
+          <ul class="info-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>React — Interactive frontend with component-based architecture</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>FastAPI — High-performance Python backend with async support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Python — Core language for ML pipeline and data processing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>scikit-learn — Machine learning model for document classification</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>spaCy — NLP-based named entity recognition for PII detection</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>PyMuPDF — Fast PDF text extraction and redaction rendering</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tailwind CSS — Utility-first styling for rapid UI development</li>
+          </ul>
+        </div>
+
+        <!-- FAQ -->
+        <div class="about-section fade-in fade-in-delay-4">
+          <h2 class="about-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            FAQ
+          </h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What file formats does PatternPulse AI support?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer"><div class="faq-answer-inner">Currently, PatternPulse AI supports PDF files only. Support for DOCX, DWG, and DXF formats is planned for future releases.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                How accurate is the classification model?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer"><div class="faq-answer-inner">The classification model achieves an average accuracy of 94.2% across all six engineering disciplines. The model is continuously improving as more training data is collected.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                What types of sensitive information can be redacted?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer"><div class="faq-answer-inner">PatternPulse AI can detect and redact person names, email addresses, phone numbers, physical addresses, and project identifiers using a combination of spaCy NER and regex pattern matching.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Is my data secure during processing?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer"><div class="faq-answer-inner">Yes. All uploaded files are encrypted during transit and at rest. Files are automatically deleted within 24 hours of processing. PatternPulse AI is fully GDPR compliant.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                Can I use PatternPulse AI via API?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer"><div class="faq-answer-inner">Yes. PatternPulse AI exposes a RESTful API built on FastAPI. You can integrate classification and redaction into your own workflow. See the <a href="docs.html">documentation page</a> for details.</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer"><div class="footer-container"><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>&copy; 2026 PatternPulse AI. All rights reserved.</p><div class="footer-socials"><a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></div></footer>
+
+  </div>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
