@@ -54,5 +54,6 @@ async def upload_pdf(file: UploadFile = File(...)):
     "discipline": prediction,
     "confidence": f"{confidence}%",
     "detected_sensitive_info": sensitive,
-    "redacted_pdf": str(redacted_file)
+    "redacted_pdf": str(redacted_file),
+    "original_pdf": f"uploads/{file.filename}"
 }

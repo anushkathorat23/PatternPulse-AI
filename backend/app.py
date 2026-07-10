@@ -21,12 +21,13 @@ app.add_middleware(
     ],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allqow_headers=["*"],
 )
 
 os.makedirs("outputs", exist_ok=True)
 os.makedirs("outputs/redacted_pdfs", exist_ok=True)
 app.mount("/outputs", StaticFiles(directory="outputs"), name="outputs")
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 @app.get("/")
 def home():
