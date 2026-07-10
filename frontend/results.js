@@ -184,7 +184,7 @@ document.getElementById("btn-download-redacted").addEventListener("click", (e) =
 
     // Convert Windows path to browser URL
     const fileUrl =
-        "http://127.0.0.1:8000/" +
+        "https://patternpulse-ai.onrender.com/" +
         result.redacted_pdf.replace(/\\/g, "/");
 
     console.log(fileUrl);
