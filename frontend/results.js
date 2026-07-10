@@ -18,6 +18,13 @@ navLinks.querySelectorAll('a').forEach(link => {
 // ===== LOAD FILENAME =====
 const storedName = sessionStorage.getItem("pp_filename");
 const result = JSON.parse(sessionStorage.getItem("pp_result"));
+const preview = document.getElementById("pdf-preview");
+
+if (result && result.original_pdf) {
+    preview.src =
+        "https://patternpulse-ai.onrender.com/" +
+        result.original_pdf.replace(/\\/g, "/");
+}
 
 // ===== Display Sensitive Information =====
 if (result) {
