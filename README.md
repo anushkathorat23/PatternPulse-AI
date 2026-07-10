@@ -1,110 +1,145 @@
 # 🚀 PatternPulse AI
 
-> AI-Powered Construction Drawing Classification & Secure PDF Redaction
+<p align="center">
 
-PatternPulse AI is a full-stack AI application that automatically classifies construction drawing PDFs into their respective disciplines and detects/redacts sensitive information before documents are shared.
+AI-Powered Construction Drawing Classification & Secure PDF Redaction Platform
 
-## 🌐 Live Demo
+Built using Machine Learning, FastAPI & Modern Web Technologies
 
-**Frontend:** https://pattern-pulse-ai.vercel.app
+</p>
 
-**Backend API:** https://patternpulse-ai.onrender.com/docs
+<p align="center">
 
----
+🌐 <a href="https://pattern-pulse-ai.vercel.app">Live Demo</a> •
+📚 <a href="https://patternpulse-ai.onrender.com/docs">API Docs</a> •
+💻 <a href="https://github.com/anushkathorat23/PatternPulse-AI">Source Code</a>
 
-## ✨ Features
-
-- 📄 Upload construction drawing PDFs
-- 🤖 AI-powered document classification
-- 📊 Confidence score prediction
-- 🔍 Sensitive information detection
-- 🔒 Automatic PDF redaction
-- 📥 Download redacted PDFs
-- 👀 Dynamic PDF preview
-- 🌐 Fully deployed web application
+</p>
 
 ---
 
-## 🛠 Tech Stack
+# ✨ Overview
+
+PatternPulse AI is an intelligent document analysis platform that automatically classifies construction drawing PDFs into engineering disciplines while detecting and securely redacting sensitive information before document sharing.
+
+The application combines **Machine Learning**, **Natural Language Processing**, **PDF Processing**, and **FastAPI** to provide a secure and efficient workflow for handling construction documents.
+
+---
+
+# 🎯 Key Features
+
+✅ Construction Drawing Classification
+
+✅ Confidence Score Prediction
+
+✅ Sensitive Information Detection
+
+✅ Secure PDF Redaction
+
+✅ Dynamic PDF Preview
+
+✅ Download Redacted PDF
+
+✅ Fully Responsive UI
+
+✅ Cloud Deployment (Render + Vercel)
+
+---
+
+# 🧠 Supported Disciplines
+
+| Discipline | Status |
+|------------|--------|
+| 🏗 Architectural | ✅ |
+| 🏛 Structural | ✅ |
+| ❄ Mechanical | ✅ |
+| 🚰 Plumbing | ✅ |
+| ⚡ Electrical | ✅ |
+| 🔥 Fire Protection | ✅ |
+
+---
+
+# 🛠 Tech Stack
 
 ### Frontend
+
 - HTML5
 - CSS3
 - JavaScript
 
 ### Backend
+
 - FastAPI
 - Python
 
 ### Machine Learning
-- Scikit-learn
+
+- Scikit-Learn
 - TF-IDF Vectorizer
 - Logistic Regression
 
 ### PDF Processing
+
 - PyMuPDF (fitz)
-- Regex
+- Regular Expressions
 
 ### Deployment
-- Vercel (Frontend)
-- Render (Backend)
+
+- Render
+- Vercel
 
 ---
 
-## 📂 Project Structure
+# ⚙ Workflow
 
+```text
+Upload PDF
+      │
+      ▼
+Extract Text
+      │
+      ▼
+ML Classification
+      │
+      ▼
+Detect Sensitive Data
+      │
+      ▼
+Redact PDF
+      │
+      ▼
+Download Secure PDF
 ```
+
+---
+
+# 📂 Project Structure
+
+```text
 PatternPulse-AI
 │
 ├── backend
-│   ├── api
-│   ├── services
-│   ├── utils
-│   ├── outputs
-│   ├── uploads
-│   ├── app.py
-│   └── requirements.txt
-│
 ├── frontend
-│   ├── index.html
-│   ├── upload.html
-│   ├── processing.html
-│   ├── results.html
-│   ├── styles.css
-│   └── JavaScript files
-│
 ├── models
-│   ├── classifier.pkl
-│   └── vectorizer.pkl
-│
+├── assets
 └── README.md
 ```
 
 ---
 
-## ⚙️ How It Works
+# 🌐 Live Deployment
 
-1. Upload a construction drawing PDF.
-2. Extract text from the document.
-3. AI model predicts the discipline.
-4. Sensitive information is detected.
-5. Sensitive data is redacted.
-6. Download the secure redacted PDF.
+### 🚀 Frontend
 
----
+https://pattern-pulse-ai.vercel.app
 
-## 🎯 Supported Disciplines
+### ⚙ Backend API
 
-- 🏗 Architectural
-- 🏛 Structural
-- ⚡ Electrical
-- 🚰 Plumbing
-- ❄ Mechanical
-- 🔥 Fire Protection
+https://patternpulse-ai.onrender.com/docs
 
 ---
 
-## 🚀 Installation
+# 🚀 Getting Started
 
 Clone the repository
 
@@ -112,20 +147,20 @@ Clone the repository
 git clone https://github.com/anushkathorat23/PatternPulse-AI.git
 ```
 
-Install backend dependencies
+Install dependencies
 
 ```bash
 cd backend
 pip install -r requirements.txt
 ```
 
-Run FastAPI
+Run backend
 
 ```bash
 uvicorn app:app --reload
 ```
 
-Open the frontend
+Open
 
 ```
 frontend/index.html
@@ -133,25 +168,37 @@ frontend/index.html
 
 ---
 
-## 🔮 Future Enhancements
+# 💡 Future Enhancements
 
 - OCR Support
-- User Authentication
-- Multi-file Processing
+- Batch PDF Processing
+- Authentication
 - Dashboard Analytics
 - Cloud Storage Integration
+- Multi-language Support
 
 ---
 
-## 👩‍💻 Developer
+# 👩‍💻 About the Developer
 
 **Anushka Thorat**
 
 Computer Engineering Student
 
-GitHub:
+Interested in
+
+- Machine Learning
+- Full Stack Development
+- Artificial Intelligence
+- NLP
+- Cloud Deployment
+
+GitHub
+
 https://github.com/anushkathorat23
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+# ⭐ If you like this project
+
+Give this repository a ⭐ and support the project!
