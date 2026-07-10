@@ -104,26 +104,6 @@ PatternPulse-AI
 
 ---
 
-## 📸 Screenshots
-
-### 🏠 Home Page
-
-![Home](assets/screenshots/home.png)
-
-### 📤 Upload Page
-
-![Upload](assets/screenshots/upload.png)
-
-### ⚙️ Processing Page
-
-![Processing](assets/screenshots/processing.png)
-
-### 📊 Results Page
-
-![Results](assets/screenshots/results.png)
-
----
-
 ## 🚀 Installation
 
 Clone the repository
