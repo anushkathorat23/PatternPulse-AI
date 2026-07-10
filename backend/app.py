@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import os
 from services.classifier import predict_discipline
 from services.extractor import extract_text
 from api.upload import router as upload_router
@@ -21,6 +22,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+os.makedirs("outputs", exist_ok=True)
+os.makedirs("outputs/redacted_pdfs", exist_ok=True)
 app.mount("/outputs", StaticFiles(directory="outputs"), name="outputs")
 
 @app.get("/")
