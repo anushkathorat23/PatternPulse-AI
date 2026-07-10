@@ -21,7 +21,7 @@ app.add_middleware(
     ],
     allow_credentials=True,
     allow_methods=["*"],
-    allqow_headers=["*"],
+    allow_headers=["*"],
 )
 
 os.makedirs("outputs", exist_ok=True)
